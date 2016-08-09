@@ -1,30 +1,7 @@
 ---
+layout: bare
 ---
-{% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 256 | escape }}{% endif %}{% endcapture %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	{% if page.split-test %}
-		{% include split-test.html test = page.split-test %}
-	{% endif %}
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{% if page.title %}{{ page.title }}{% unless page.exacttitle %} - {% endunless %}{% endif %}{% unless page.exacttitle %}{{ site.title }}{% endunless %}</title>
-	<meta name="description" content="{{ description }}">
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link href="/css/wolfram.css" rel="stylesheet">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@Wurst_Imperium">
-	<meta name="twitter:title" content="{{ page.title }}">
-	<meta name="twitter:description" content="{{ description }}">
-	<meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% elsif page.video %}https://i.ytimg.com/vi/{{ page.video }}/maxresdefault.jpg{% endif %}">
-	{% include analytics.html %}
-</head>
-<body>
-	{% include header.html %}
+<div style="width: 100%;height: 3.125rem;"></div>
+<div class="container">
 	{{ content }}
-	{% include footer.html %}
-	<script src="/js/wolfram.js"></script>
-</body>
-</html>
+</div>
