@@ -14,6 +14,9 @@ title: Wolfram
 analytics-id: UA-52838431-13
 
 collections:
+  contact:
+    output: true
+    permalink: /contact/:name/
   redirects:
     output: true
     permalink: /:path/
@@ -25,6 +28,12 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  -
+    scope:
+      path: ""
+      type: "contact"
+    values:
+      layout: contact
   -
     scope:
       path: ""
