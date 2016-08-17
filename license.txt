@@ -1,0 +1,35 @@
+Wolfram Client License
+Copyright © 2016 | Wurst-Imperium | All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to distribute
+pictures and videos of the Software, even for commercial purposes (e.g.
+monetized YouTube videos or blog posts are permitted), subject to the following
+conditions:
+
+- The Software itself may not be distributed by anyone else than the copyright
+holders without explicit permission from the copyright holders (e.g. uploading
+the Software to some kind of public file-sharing service is forbidden). However,
+permission is granted to send people to a website owned by the copyright holders
+that is distributing the Software (e.g. linking to
+www.Wolfram-Client.tk/download is permitted), even for commercial purposes (e.g.
+an AdFly link redirecting to www.Wolfram-Client.tk/download is also permitted).
+
+- The origin of the Software must not be misrepresented (e.g. pretending to be
+the creator of the Software is forbidden).
+
+- Any decompiled or otherwise reverse-engineered versions of the Software or
+portions thereof (collecively "Source Code") may not be distributed (e.g.
+uploading the Source Code to some kind of public file-sharing service is
+forbidden). Pictures or videos of the Source Code may not be distributed either
+(e.g. making a YouTube video of the Source Code is also forbidden).
+
+This license is not intended to limit any person's rights under applicable
+copyright doctrines of fair use, fair dealing, or other equivalents.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
