@@ -20,23 +20,29 @@ collections:
   redirects:
     output: true
     permalink: /:path/
+  questions:
+    output: true
+    permalink: /faq/:slug/
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "contact"
     values:
       layout: contact
-  -
-    scope:
+  - scope:
       path: ""
       type: "redirects"
     values:
       layout: "redirect"
+  - scope:
+      path: ""
+      type: questions
+    values:
+      layout: question
+      category: Miscellaneous
