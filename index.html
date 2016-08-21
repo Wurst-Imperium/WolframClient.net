@@ -2,6 +2,12 @@
 title: Wolfram (Minecraft Hacked Client)
 exacttitle: true
 layout: bare
+screenshots:
+  https://cloud.githubusercontent.com/assets/10100202/17835908/e7ee248a-6780-11e6-8461-b8eb1fad3f3b.jpg: lots of cheats
+  https://cloud.githubusercontent.com/assets/10100202/17835909/e7eef702-6780-11e6-868b-f424a6b7f0a7.jpg: beautiful GUI
+  https://cloud.githubusercontent.com/assets/10100202/17835906/e7ea0ef4-6780-11e6-856f-d8a84b2ea855.jpg: OptiFine integration
+  https://cloud.githubusercontent.com/assets/10100202/17835910/e7ef6020-6780-11e6-80ca-3d1ec4a2607b.jpg: Wolfram for Minecraft 1.9.4
+  https://cloud.githubusercontent.com/assets/10100202/17835907/e7edc382-6780-11e6-8264-8b23da27e6f7.jpg: Wolfram for Minecraft 1.10
 ---
 <div class="padding100 no-padding-left no-padding-right bg-steel" style="background-attachment: fixed;background-repeat: no-repeat;background-size: cover;background-position: center center;background-image: url('https://60ajra.dm2304.livefilestore.com/y3mI1fT3oKCFSXUkG1aF-QmsP3Fis89Dwv773N7ThZvEQTgpFTsFBtuvrnLpvwSRIdivbwirpFUaRd3Hj8S8_9mrwmM-Km6D7c4SIl15bcDFPTBrjdLXpVjTuib9dlUVYM63Woy4svb-58uC1-7Pquq2q_mArllNUSU5s4KnCJHV48QquKpefrrwV0oCR08rCgv?width=1920&height=1080&cropmode=none');">
 	<div style="width: 100%;height: 3.125rem;"></div>
@@ -11,22 +17,7 @@ layout: bare
 		</h1>
 	</div>
 </div>
-<div class="container">
-	<div class="margin20 no-margin-left no-margin-right padding10 ribbed-steel">
-		<div class="padding10 bg-white align-center">
-			<h2>Coming Soon</h2>
-			<p>
-				Subscribe to our YouTube channel or follow us on Twitter to get notified when Wolfram is released.
-			</p>
-			<div>
-				<iframe src="http://www.youtube.com/subscribe_widget?p=Alexander01998" style="height: 80px;width: 256px;" scrolling="no" frameborder="0"></iframe>
-			</div>
-			<div>
-				<a href="https://twitter.com/Wurst_Imperium" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @Wurst_Imperium</a>
-				<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-			</div>
-		</div>
-	</div>
+<div class="container padding20 no-padding-left no-padding-right">
 	<h2 class="align-center">About Wolfram</h2>
 	<p>
 		Wolfram is a hacked client for Minecraft that allows you to do all kinds of cheats and hacks that the game normally wouldn't allow, such as flying in Surivival Mode, finding ores with X-Ray vision and automatically attacking enemies.
@@ -37,4 +28,29 @@ layout: bare
 	<p>
 		Wolfram was originally created by ShadowSpl0it, who later abandoned the project, and is now maintained by the Wurst-Imperium. We have updated the client to Minecraft 1.9.4 as well as Minecraft 1.10 and we will soon be releasing those versions. <em>Don't miss out!</em>
 	</p>
+	<h2 class="align-center">Screenshots</h2>
+	<div class="flex-grid">
+		<div class="row flex-wrap">
+			{% for screenshot in page.screenshots %}
+				<div class="cell size-p50 padding10">
+					<a href="{{ screenshot[0] }}" target="_blank" style="cursor: -webkit-zoom-in;">
+						<img src="{{ screenshot[0] }}" alt="{{ screenshot[1] }}" title="{{ screenshot[1] }}">
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="align-center">
+		<h2>Downloads - Coming Soon</h2>
+		<p>
+			Subscribe to our YouTube channel or follow us on Twitter to get notified when Wolfram is released.
+		</p>
+		<div>
+			<iframe src="http://www.youtube.com/subscribe_widget?p=Alexander01998" style="height: 80px;width: 256px;" scrolling="no" frameborder="0"></iframe>
+		</div>
+		<div>
+			<a href="https://twitter.com/Wurst_Imperium" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @Wurst_Imperium</a>
+			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
 </div>
