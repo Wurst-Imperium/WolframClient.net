@@ -2,10 +2,10 @@ Wolfram Client License
 Copyright © 2016 | Wurst-Imperium | All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to distribute
-pictures and videos of the Software, even for commercial purposes (e.g.
-monetized YouTube videos or blog posts are permitted), subject to the following
-conditions:
+this software and associated documentation files (the "Software"), to use the
+Software and to distribute pictures and videos of the Software, even for
+commercial purposes (e.g. monetized YouTube videos or blog posts are permitted),
+subject to the following conditions:
 
 - The Software itself may not be distributed by anyone else than the copyright
 holders without explicit permission from the copyright holders (e.g. uploading
