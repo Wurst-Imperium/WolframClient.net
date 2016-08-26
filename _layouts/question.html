@@ -20,32 +20,7 @@ layout: bare
 	</div>
 	<div class="post-content">
 		{{ content }}
-		<footer class="tile-container bg-grayLighter margin20 no-margin-left no-margin-right padding10 shadow">
-			<div class="tile-group no-margin-left">
-				<span class="tile-group-title fg-black">Share</span>
-				<a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url=https%3A//www.wolfram-client.tk{{ page.url | remove: "index.html" | uri_escape }}&via=Wurst_Imperium" target="_blank" onclick="ga('send', 'event', 'faq', 'share', 'twitter');">
-					<div class="tile-small bg-cyan fg-white">
-						<div class="tile-content iconic">
-							<span class="icon mif-twitter"></span>
-						</div>
-					</div>
-				</a>
-				<a href="https://plus.google.com/share?url=https%3A//www.wolfram-client.tk{{ page.url | remove: "index.html" | uri_escape }}" target="_blank" onclick="ga('send', 'event', 'faq', 'share', 'google');">
-					<div class="tile-small bg-red fg-white">
-						<div class="tile-content iconic">
-							<span class="icon mif-google-plus"></span>
-						</div>
-					</div>
-				</a>
-				<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.wolfram-client.tk{{ page.url | remove: "index.html" | uri_escape }}" target="_blank" onclick="ga('send', 'event', 'faq', 'share', 'facebook');">
-					<div class="tile-small bg-darkBlue fg-white">
-						<div class="tile-content iconic">
-							<span class="icon mif-facebook"></span>
-						</div>
-					</div>
-				</a>
-			</div>
-		</footer>
+		{% include share-buttons.html category = "faq" %}
 	</div>
 </div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
