@@ -1,0 +1,28 @@
+{% unless post %}
+  {% assign post = page %}
+{% endunless %}
+{% if post.image or post.video %}
+  <div class="margin20 no-margin-left no-margin-right padding10 bg-grayDarker">
+    {% if page == post %}
+      {% if post.video %}
+        <a href="https://www.youtube.com/watch?v={{ post.video }}" target="_blank" onclick="ga('send', 'event', 'news', 'watch video');">
+          <div class="image-container">
+            <div class="frame no-padding tile-content iconic">
+              <img src="{% if post.image %}{{ post.image }}{% else %}https://i.ytimg.com/vi/{{ post.video }}/maxresdefault.jpg{% endif %}" alt="{{ post.title }}">
+              <span class="icon mif-play op-dark bg-hover-red fg-white shadow"></span>
+            </div>
+            <div class="image-overlay" style="background-color: rgba(0, 0, 0, .8);">
+              <p class="leader text-shadow">Play Video</p>
+            </div>
+          </div>
+        </a>
+      {% else %}
+        <img src="{{ post.image }}" alt="{{ post.title }}">
+      {% endif %}
+    {% else %}
+      <a href="{{ post.url }}">
+        <img src="{% if post.image %}{{ post.image }}{% elsif post.video %}https://i.ytimg.com/vi/{{ post.video }}/maxresdefault.jpg{% endif %}" alt="{{ post.title }}">
+      </a>
+    {% endif %}
+  </div>
+{% endif %}

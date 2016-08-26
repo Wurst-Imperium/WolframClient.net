@@ -11,6 +11,11 @@ timezone: Europe/Berlin
 
 title: Wolfram
 
+paginate: 8
+paginate_path: "/news/:num/"
+permalink: /news/:year-:month-:day-:title/
+excerpt_separator: <!--read more-->
+
 analytics-id: UA-52838431-13
 
 collections:
@@ -30,6 +35,12 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Alexander01998
   - scope:
       path: ""
       type: "contact"
