@@ -74,6 +74,15 @@ a:hover {
     outline: 0
 }
 
+a:active,
+a:hover {
+    text-decoration: underline;
+}
+
+.app-bar a {
+  text-decoration: none;
+}
+
 sub,
 sup {
     position: relative;
