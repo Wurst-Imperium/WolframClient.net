@@ -1,0 +1,11 @@
+---
+layout: none
+---
+{% assign update-posts = site.posts | where: "minecraft-version", page.mcversion %}{% comment %}
+{% endcomment %}{{ "{" }}{% comment %}
+{% endcomment %}{% for post in update-posts %}{% comment %}
+{% endcomment %}
+  "{{ post.wolfram-version }}": "{{ post.date | date: "%F" }}"{% comment %}
+{% endcomment %}{% unless forloop.last %},{% endunless %}{% comment %}
+{% endcomment %}{% endfor %}
+}
