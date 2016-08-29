@@ -55,7 +55,7 @@ mcversions:
               </div>
             {% endfor %}
             <div class="cell">
-              <a href="minecraft-{{ mcversion | slugify }}">
+              <a href="minecraft-{{ mcversion | slugify }}/">
                 <div class="image-container">
                   <div class="frame bg-grayLighter tile-content iconic">
                     <img src="{% if updates[0].image %}{{ updates[0].image }}{% else %}https://i.ytimg.com/vi/{{ updates[0].video }}/mqdefault.jpg{% endif %}" alt="{{ updates[0].title }}" class="no-visible">
@@ -68,7 +68,7 @@ mcversions:
                   </div>
                 </div>
               </a>
-              <h4><a href="minecraft-{{ updates[0].minecraft-version | slugify }}">All Versions</a></h4>
+              <h4><a href="minecraft-{{ updates[0].minecraft-version | slugify }}/">All Versions</a></h4>
             </div>
           </div>
         </div>
