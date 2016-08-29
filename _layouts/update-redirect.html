@@ -1,0 +1,12 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <title>Redirecting...</title>
+  {% assign updates = site.posts | where: "minecraft-version", page.mcversion %}
+  <meta http-equiv="refresh" content="0;url={{ updates[0].url }}">
+</head>
+</html>
