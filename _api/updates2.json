@@ -1,7 +1,3 @@
----
-layout: none
-permalink: /api/updates2.json
----
 {
   "mc1.8": {
     "releases_url": "https://api.github.com/repos/Wurst-Imperium/Wolfram-MC-1.8/releases",
