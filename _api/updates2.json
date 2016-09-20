@@ -1,0 +1,16 @@
+---
+---
+{
+  "mc1.8": {
+    "releases_url": "https://api.github.com/repos/Wurst-Imperium/Wolfram-MC-1.8/releases",
+    "new_system": false
+  },
+  "mc1.9.4": {
+    "releases_url": "https://api.github.com/repos/Wurst-Imperium/Wolfram-MC-1.9.4/releases",
+    "new_system": false
+  },
+  "mc1.10": {
+    "releases_url": "https://api.github.com/repos/Wurst-Imperium/Wolfram-MC-1.10/releases",
+    "new_system": false
+  }
+}
