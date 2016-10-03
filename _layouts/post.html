@@ -14,9 +14,9 @@ layout: bare
 	<div class="post-content">
 		{% include news/thumbnail.html %}
 		{{ content }}
-		{% if post.wolfram-download %}
+		{% if post.wolfram-version and post.minecraft-version %}
 		<p>
-	    <a class="command-button primary text-shadow bg-grayDark bd-grayDark bg-hover-grayDarker" href="{{ page.wolfram-download }}" rel="nofollow" target="_blank" onclick="ga('send', 'event', 'news', 'download');">
+	    <a class="command-button primary text-shadow bg-grayDark bd-grayDark bg-hover-grayDarker" href="http://go.wolfram-client.tk/10371505/github.com/Wurst-Imperium/Wolfram-MC-{{ page.minecraft-version }}/releases/download/v{{ page.wolfram-version }}/Wolfram-v{{ page.wolfram-version }}-MC{{ page.minecraft-version }}.zip" rel="nofollow" target="_blank" onclick="ga('send', 'event', 'news', 'download');">
 	      <span class="icon mif-file-download"></span>
 	      Download Wolfram
 				<small>version {{ post.wolfram-version }} for Minecraft {{ post.minecraft-version }}</small>
