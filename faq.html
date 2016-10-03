@@ -3,22 +3,31 @@ title: Frequently Asked Questions
 layout: bare
 permalink: /faq/
 ---
-<div style="width: 100%;height: 3.125rem;"></div>
-<div class="container">
-	<h1 class="align-center margin20 no-margin-left no-margin-right">{{ page.title }}</h1>
+<div class="bg-steel fg-white">
+	<div style="width: 100%;height: 3.125rem;"></div>
+	<div class="container">
+		<h1 class="align-center text-shadow no-margin padding20 no-padding-left no-padding-right">{{ page.title }}</h1>
+	</div>
 </div>
-<hr>
-<div class="container">
-  {% assign faq = site.questions | group_by: "category" %}
-  {% for category in faq %}
-    <h2>{{ category.name }}</h2>
-    <ul class="simple-list dark-bullet">
-      {% for question in category.items %}
-        <li><a href="{{ question.url }}">{{ question.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
-	<p>
-		Is your question not listed here? <a href="/contact/">Contact us!</a>
-	</p>
-</div>
+{% assign faq = site.questions | group_by: "category" %}
+{% for category in faq %}
+  {% assign modulo = forloop.index0 | modulo: 2 %}
+	<div{% if modulo == 1 %} class="bg-grayLighter"{% endif %}>
+		<div class="container padding10 no-padding-left no-padding-right">
+	    <h2>{{ category.name }}</h2>
+	    <ul>
+	      {% for question in category.items %}
+	        <li><p><a href="{{ question.url }}">{{ question.title }}</a></p></li>
+	      {% endfor %}
+	    </ul>
+		</div>
+	</div>
+	{% if forloop.last %}
+		<div class="{% if modulo == 0 %}bg-grayLighter {% endif %}text-accent">
+			<div class="container padding20 no-padding-left no-padding-right">
+				Is your question not listed here?
+				<a href="/contact/">Contact us!</a>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
