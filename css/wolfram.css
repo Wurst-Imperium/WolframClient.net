@@ -6879,11 +6879,6 @@ span.square-button.big-button {
     cursor: default
 }
 
-.breadcrumbs>li:last-child:after,
-.breadcrumbs>li:last-child:before {
-    background-color: transparent
-}
-
 .breadcrumbs>li:hover {
     color: #1d1d1d
 }
@@ -6910,6 +6905,11 @@ span.square-button.big-button {
 .breadcrumbs.dark>li:after,
 .breadcrumbs.dark>li:before {
     background-color: #fff
+}
+
+.breadcrumbs>li:last-child:after,
+.breadcrumbs>li:last-child:before {
+    background-color: transparent
 }
 
 .breadcrumbs2 {
