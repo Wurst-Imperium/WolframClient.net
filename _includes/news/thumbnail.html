@@ -2,7 +2,7 @@
   {% assign post = page %}
 {% endunless %}
 {% if post.image or post.video %}
-  <div class="margin20 no-margin-left no-margin-right padding10 bg-grayDarker">
+  <div class="margin20 no-margin-left no-margin-right no-margin-top padding10 bg-grayDarker">
     {% if page == post %}
       {% if post.video %}
         <a href="https://www.youtube.com/watch?v={{ post.video }}" target="_blank" onclick="ga('send', 'event', 'news', 'watch video');">
