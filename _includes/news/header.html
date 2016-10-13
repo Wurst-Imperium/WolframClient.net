@@ -2,11 +2,6 @@
   {% assign post = page %}
 {% endunless %}
 {% if page == post %}
-	<!--<ul class="breadcrumbs dark bg-steel fg-grayLighter no-padding">
-	  <li><a href="/">Wolfram</a></li>
-	  <li><a href="/news/">News</a></li>
-	  <li><span>{{ page.slug | replace: "-", " " }}</span></li>
-	</ul>-->
   <h1 class="align-center text-shadow">{{ post.title }}</h1>
 {% else %}
   <h1 class="sub-leader">
