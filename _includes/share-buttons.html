@@ -1,26 +1,23 @@
-<div class="tile-container bg-grayLighter margin20 no-margin-left no-margin-right padding10">
-  <div class="tile-group no-margin-left">
-    <span class="tile-group-title fg-black">Share</span>
-    <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url=https%3A//www.wolfram-client.tk{{ page.url | remove: "index.html" | uri_escape }}&via=Wurst_Imperium" target="_blank" onclick="{% if include.category %}ga('send', 'event', '{{ include.category }}', 'share', 'twitter');{% endif %}">
-      <div class="tile-small bg-cyan fg-white">
-        <div class="tile-content iconic">
-          <span class="icon mif-twitter"></span>
-        </div>
+<div class="tile-container">
+  <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url=https%3A//www.wolfram-client.tk{{ page.url | remove: "index.html" | uri_escape }}&via=Wurst_Imperium" target="_blank" onclick="{% if include.category %}ga('send', 'event', '{{ include.category }}', 'share', 'twitter');{% endif %}">
+    <div class="tile-small bg-cyan fg-white">
+      <div class="tile-content iconic">
+        <span class="icon mif-twitter"></span>
       </div>
-    </a>
-    <a href="https://plus.google.com/share?url=https%3A//www.wolfram-client.tk{{ page.url | remove: "index.html" | uri_escape }}" target="_blank" onclick="{% if include.category %}ga('send', 'event', '{{ include.category }}', 'share', 'google');{% endif %}">
-      <div class="tile-small bg-red fg-white">
-        <div class="tile-content iconic">
-          <span class="icon mif-google-plus"></span>
-        </div>
+    </div>
+  </a>
+  <a href="https://plus.google.com/share?url=https%3A//www.wolfram-client.tk{{ page.url | remove: "index.html" | uri_escape }}" target="_blank" onclick="{% if include.category %}ga('send', 'event', '{{ include.category }}', 'share', 'google');{% endif %}">
+    <div class="tile-small bg-red fg-white">
+      <div class="tile-content iconic">
+        <span class="icon mif-google-plus"></span>
       </div>
-    </a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.wolfram-client.tk{{ page.url | remove: "index.html" | uri_escape }}" target="_blank" onclick="{% if include.category %}ga('send', 'event', '{{ include.category }}', 'share', 'facebook');{% endif %}">
-      <div class="tile-small bg-darkBlue fg-white">
-        <div class="tile-content iconic">
-          <span class="icon mif-facebook"></span>
-        </div>
+    </div>
+  </a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.wolfram-client.tk{{ page.url | remove: "index.html" | uri_escape }}" target="_blank" onclick="{% if include.category %}ga('send', 'event', '{{ include.category }}', 'share', 'facebook');{% endif %}">
+    <div class="tile-small bg-darkBlue fg-white">
+      <div class="tile-content iconic">
+        <span class="icon mif-facebook"></span>
       </div>
-    </a>
-  </div>
+    </div>
+  </a>
 </div>
