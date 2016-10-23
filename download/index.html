@@ -1,48 +1,37 @@
 ---
 title: Minecraft Wolfram Hacked Client Downloads
+layout: bare
 permalink: /download/
 mcversions:
   - "1.10"
   - "1.9.4"
   - "1.8"
 ---
-<h1 class="align-center">{{ page.title }}</h1>
-<hr>
-<div class="accordion large-heading" data-role="accordion" data-close-any="true">
-  {% for mcversion in page.mcversions %}
-    {% assign updates = site.posts | where: "minecraft-version", mcversion %}
-    <div class="frame{% if forloop.first %} active{% endif %}">
-      <h2 class="heading" style="text-transform: none;">Wolfram for Minecraft {{ mcversion }}</h2>
-      <div class="content">
-        <h3>Latest Version</h3>
-        <div class="grid">
-          <div class="row cells3">
-            <div class="cell">
-              <a href="{{ updates[0].url }}">
-                <div class="image-container">
-                  <div class="frame">
-                    <img src="{% if updates[0].image %}{{ updates[0].image | replace: "w1280-h720-no", "w320-h180-no" }}{% else %}https://i.ytimg.com/vi/{{ updates[0].video }}/mqdefault.jpg{% endif %}" alt="{{ updates[0].title }}">
-                  </div>
-                  <div class="image-overlay" style="background-color: rgba(0, 0, 0, .8);">
-                    <div class="leader text-shadow" style="width: 100%;height: 100%;display: table;">
-                      <span class="mif-link fg-white" style="display: table-cell;vertical-align: middle;"></span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <h4><a href="{{ updates[0].url }}">{{ updates[0].title }}</a></h4>
-            </div>
-          </div>
-        </div>
-        <h3>Older Versions</h3>
-        <div class="grid">
-          <div class="row cells4">
-            {% for update in updates limit: 3 offset: 1 %}
+<header class="bg-steel fg-white">
+	<div style="width: 100%;height: 3.125rem;"></div>
+	<div class="container padding40 no-padding-left no-padding-right">
+    <h1 class="align-center text-shadow">
+      {{ page.title }}
+      <br>
+      <small class="fg-grayLighter">Wolfram downloads for all Minecraft versions</small>
+    </h1>
+	</div>
+</header>
+<div class="container">
+  <div class="accordion large-heading" data-role="accordion" data-close-any="true">
+    {% for mcversion in page.mcversions %}
+      {% assign updates = site.posts | where: "minecraft-version", mcversion %}
+      <div class="frame{% if forloop.first %} active{% endif %}">
+        <h2 class="heading" style="text-transform: none;">Wolfram for Minecraft {{ mcversion }}</h2>
+        <div class="content">
+          <h3>Latest Version</h3>
+          <div class="grid">
+            <div class="row cells3">
               <div class="cell">
-                <a href="{{ update.url }}">
+                <a href="{{ updates[0].url }}">
                   <div class="image-container">
                     <div class="frame">
-                      <img src="{% if update.image %}{{ update.image | replace: "w1280-h720-no", "w320-h180-no" }}{% else %}https://i.ytimg.com/vi/{{ update.video }}/mqdefault.jpg{% endif %}" alt="{{ update.title }}">
+                      <img src="{% if updates[0].image %}{{ updates[0].image | replace: "w1280-h720-no", "w320-h180-no" }}{% else %}https://i.ytimg.com/vi/{{ updates[0].video }}/mqdefault.jpg{% endif %}" alt="{{ updates[0].title }}">
                     </div>
                     <div class="image-overlay" style="background-color: rgba(0, 0, 0, .8);">
                       <div class="leader text-shadow" style="width: 100%;height: 100%;display: table;">
@@ -51,28 +40,50 @@ mcversions:
                     </div>
                   </div>
                 </a>
-                <h4><a href="{{ update.url }}">{{ update.title }}</a></h4>
+                <h4><a href="{{ updates[0].url }}">{{ updates[0].title }}</a></h4>
               </div>
-            {% endfor %}
-            <div class="cell">
-              <a href="minecraft-{{ mcversion | slugify }}/">
-                <div class="image-container">
-                  <div class="frame bg-grayLighter tile-content iconic">
-                    <img src="{% if updates[0].image %}{{ updates[0].image }}{% else %}https://i.ytimg.com/vi/{{ updates[0].video }}/mqdefault.jpg{% endif %}" alt="{{ updates[0].title }}" class="no-visible">
-                    <span class="icon mif-folder-open fg-grayLight" style="margin-top: -32px;"></span>
-                  </div>
-                  <div class="image-overlay" style="background-color: rgba(0, 0, 0, .8);">
-                    <div class="leader text-shadow" style="width: 100%;height: 100%;display: table;">
-                      <span class="mif-link fg-white" style="display: table-cell;vertical-align: middle;"></span>
+            </div>
+          </div>
+          <h3>Older Versions</h3>
+          <div class="grid">
+            <div class="row cells4">
+              {% for update in updates limit: 3 offset: 1 %}
+                <div class="cell">
+                  <a href="{{ update.url }}">
+                    <div class="image-container">
+                      <div class="frame">
+                        <img src="{% if update.image %}{{ update.image | replace: "w1280-h720-no", "w320-h180-no" }}{% else %}https://i.ytimg.com/vi/{{ update.video }}/mqdefault.jpg{% endif %}" alt="{{ update.title }}">
+                      </div>
+                      <div class="image-overlay" style="background-color: rgba(0, 0, 0, .8);">
+                        <div class="leader text-shadow" style="width: 100%;height: 100%;display: table;">
+                          <span class="mif-link fg-white" style="display: table-cell;vertical-align: middle;"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <h4><a href="{{ update.url }}">{{ update.title }}</a></h4>
+                </div>
+              {% endfor %}
+              <div class="cell">
+                <a href="minecraft-{{ mcversion | slugify }}/">
+                  <div class="image-container">
+                    <div class="frame bg-grayLighter tile-content iconic">
+                      <img src="{% if updates[0].image %}{{ updates[0].image }}{% else %}https://i.ytimg.com/vi/{{ updates[0].video }}/mqdefault.jpg{% endif %}" alt="{{ updates[0].title }}" class="no-visible">
+                      <span class="icon mif-folder-open fg-grayLight" style="margin-top: -32px;"></span>
+                    </div>
+                    <div class="image-overlay" style="background-color: rgba(0, 0, 0, .8);">
+                      <div class="leader text-shadow" style="width: 100%;height: 100%;display: table;">
+                        <span class="mif-link fg-white" style="display: table-cell;vertical-align: middle;"></span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </a>
-              <h4><a href="minecraft-{{ updates[0].minecraft-version | slugify }}/">All Versions</a></h4>
+                </a>
+                <h4><a href="minecraft-{{ updates[0].minecraft-version | slugify }}/">All Versions</a></h4>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>
