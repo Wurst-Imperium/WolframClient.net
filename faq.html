@@ -3,12 +3,12 @@ title: Frequently Asked Questions
 layout: bare
 permalink: /faq/
 ---
-<div class="bg-steel fg-white">
+<header class="bg-steel fg-white">
 	<div style="width: 100%;height: 3.125rem;"></div>
-	<div class="container padding20 no-padding-left no-padding-right">
+	<div class="container padding40 no-padding-left no-padding-right">
 		<h1 class="align-center text-shadow">{{ page.title }}</h1>
 	</div>
-</div>
+</header>
 {% assign faq = site.questions | group_by: "category" %}
 {% for category in faq %}
   {% assign modulo = forloop.index0 | modulo: 2 %}
