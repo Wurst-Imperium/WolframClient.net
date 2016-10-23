@@ -5,15 +5,15 @@ permalink: /faq/
 ---
 <div class="bg-steel fg-white">
 	<div style="width: 100%;height: 3.125rem;"></div>
-	<div class="container">
-		<h1 class="align-center text-shadow no-margin padding20 no-padding-left no-padding-right">{{ page.title }}</h1>
+	<div class="container padding20 no-padding-left no-padding-right">
+		<h1 class="align-center text-shadow">{{ page.title }}</h1>
 	</div>
 </div>
 {% assign faq = site.questions | group_by: "category" %}
 {% for category in faq %}
   {% assign modulo = forloop.index0 | modulo: 2 %}
-	<div{% if modulo == 1 %} class="bg-grayLighter"{% endif %}>
-		<div class="container padding10 no-padding-left no-padding-right">
+	<div class="padding20 no-padding-left no-padding-right{% if modulo == 1 %} bg-grayLighter{% endif %}">
+		<div class="container">
 	    <h2>{{ category.name }}</h2>
 	    <ul>
 	      {% for question in category.items %}
@@ -23,10 +23,10 @@ permalink: /faq/
 		</div>
 	</div>
 	{% if forloop.last %}
-		<div class="{% if modulo == 0 %}bg-grayLighter {% endif %}text-accent">
-			<div class="container padding20 no-padding-left no-padding-right">
+		<div class="{% if modulo == 0 %}bg-grayLighter {% endif %}text-accent padding20 no-padding-left no-padding-right">
+			<div class="container align-center">
 				Is your question not listed here?
-				<a href="/contact/">Contact us!</a>
+				<a href="/contact/">Contact&nbsp;us!</a>
 			</div>
 		</div>
 	{% endif %}
