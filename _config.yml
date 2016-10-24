@@ -1,5 +1,4 @@
 exclude:
-- /images
 - README.md
 - start.bat
 
