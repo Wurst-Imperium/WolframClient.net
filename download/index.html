@@ -3,6 +3,7 @@ title: Minecraft Wolfram Hacked Client Downloads
 layout: bare
 permalink: /download/
 mcversions:
+  - "all"
   - "1.10"
   - "1.9.4"
   - "1.8"
@@ -20,9 +21,13 @@ mcversions:
 <div class="padding20 no-padding-left no-padding-right">
   <div class="container">
     {% for mcversion in page.mcversions %}
-      {% assign updates = site.posts | where: "minecraft-version", mcversion %}
+      {% if mcversion == "all" %}
+        {% assign updates = site.posts | where: "category", "Wolfram Update" %}
+      {% else %}
+        {% assign updates = site.posts | where: "minecraft-version", mcversion %}
+      {% endif %}
       <div class="margin10 no-margin-left no-margin-right padding10 no-padding-top no-padding-bottom bg-grayLighter fg-gray set-border text-light">
-        <h2 class="text-light">Wolfram for Minecraft {{ mcversion }}</h2>
+        <h2 class="text-light">{% if mcversion == "all" %}Latest Updates{% else %}Wolfram for Minecraft {{ mcversion }}{% endif %}</h2>
       </div>
       <div class="grid padding10">
         <div class="row cells4">
@@ -46,7 +51,12 @@ mcversions:
             </div>
           {% endfor %}
           <div class="cell">
-            <a href="minecraft-{{ mcversion | slugify }}/">
+            {% if mcversion == "all" %}
+              {% capture allversions %}all/{% endcapture %}
+            {% else %}
+              {% capture allversions %}minecraft-{{ updates[0].minecraft-version | slugify }}/{% endcapture %}
+            {% endif %}
+            <a href="{{ allversions }}">
               <div class="image-container">
                 <div class="frame bg-grayLighter set-border tile-content iconic">
                   <img src="{% if updates[0].image %}{{ updates[0].image }}{% else %}https://i.ytimg.com/vi/{{ updates[0].video }}/mqdefault.jpg{% endif %}" alt="{{ updates[0].title }}" class="no-visible">
@@ -60,7 +70,7 @@ mcversions:
               </div>
             </a>
             <h3 class="sub-header">
-              <a href="minecraft-{{ updates[0].minecraft-version | slugify }}/">All Versions</a>
+              <a href="{{ allversions }}">All Versions</a>
             </h3>
           </div>
         </div>
