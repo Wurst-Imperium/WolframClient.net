@@ -12,5 +12,9 @@
   "mc1.10": {
     "releases_url": "https://api.github.com/repos/Wurst-Imperium/Wolfram-MC-1.10/releases",
     "new_system": false
+  },
+  "mc1.11": {
+    "releases_url": "https://api.github.com/repos/Wurst-Imperium/Wolfram-MC-1.11/releases",
+    "new_system": false
   }
 }
