@@ -8,7 +8,7 @@ gems:
 
 timezone: Europe/Berlin
 
-title: Wolfram
+title: Wolfram-Client.tk
 
 paginate: 8
 paginate_path: "/news/:num/"
