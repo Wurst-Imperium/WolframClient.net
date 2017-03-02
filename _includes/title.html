@@ -1,0 +1,12 @@
+<header class="bg-steel fg-white">
+	<div style="width: 100%;height: 3.125rem;"></div>
+	<div class="container padding40 no-padding-left no-padding-right">
+    <h1 class="align-center text-shadow">
+      {{ include.l1 }}
+      {% if include.l2 %}
+        <br>
+        <small class="fg-grayLighter">{{ include.l2 }}</small>
+      {% endif %}
+    </h1>
+	</div>
+</header>
