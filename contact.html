@@ -2,10 +2,6 @@
 title: Contact Us
 layout: bare
 permalink: /contact/
-contact-options:
-  "@Wurst_Imperium on Twitter": https://twitter.com/Wurst_Imperium
-  Our Discord server: https://discord.gg/2K8cFmG
-  "E-Mail: contact.wurstimperium@gmail.com": mailto:contact.wurstimperium@gmail.com
 ---
 {% include title.html l1 = page.title %}
 
@@ -17,9 +13,9 @@ contact-options:
         Here is how you can contact us:
       </p>
       <ul>
-	      {% for option in page.contact-options %}
-	        <li><p><a href="{{ option[1] }}">{{ option[0] }}</a></p></li>
-	      {% endfor %}
+        <li><p><a href="https://twitter.com/Wurst_Imperium">@Wurst_Imperium on Twitter</a></p></li>
+        <li><p>Our Discord server</p></li>
+        <li><p><a href="mailto:contact.wurstimperium@gmail.com">E-Mail: contact.wurstimperium@gmail.com</a></p></li>
       </ul>
     </div>
 
