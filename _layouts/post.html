@@ -7,38 +7,42 @@ layout: bare
 		{% include news/header.html %}
 	</div>
 </header>
+
 <div class="padding20 no-padding-left no-padding-right">
 	<div class="container post-content">
+
 		<!-- Wolfram News -->
 		<div class="margin20 no-margin-left no-margin-right no-margin-top">
 			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5218363098774955" data-ad-slot="7879285223" data-ad-format="auto"></ins>
 		</div>
+
 		{% include news/thumbnail.html %}
-		{{ content }}
+
+		<div class="margin20 no-margin-left no-margin-right no-margin-top">
+			{% include share-buttons.html %}
+		</div>
+
+		<div class="margin20 no-margin-left no-margin-right no-margin-top">
+			{{ content }}
+		</div>
+
 	</div>
 </div>
-<div class="bg-grayLighter padding40 no-padding-left no-padding-right">
-	<div class="container post-content">
-		<div class="grid">
-			<div class="row cells2">
-				{% if post.wolfram-version and post.minecraft-version %}
-					<div class="cell">
-						<h2>Download</h2>
-						<a class="tile bg-grayDark command-button primary no-border" href="http://github.com/Wurst-Imperium/Wolfram-MC-{{ page.minecraft-version }}/releases/download/v{{ page.wolfram-version }}/Wolfram-v{{ page.wolfram-version }}-MC{{ page.minecraft-version }}.zip" rel="nofollow" target="_blank" onclick="ga('send', 'event', 'news', 'download');" style="width: auto;height: auto;">
-							<span class="icon mif-file-download"></span>
-							Download Wolfram
-							<small>version {{ post.wolfram-version }} for Minecraft {{ post.minecraft-version }}</small>
-						</a>
-					</div>
-				{% endif %}
-				<div class="cell">
-					<h2>Share</h2>
-					{% include share-buttons.html category = "news" %}
-				</div>
-			</div>
+
+{% if post.wolfram-version and post.minecraft-version %}
+	<div class="bg-grayLighter padding40 no-padding-left no-padding-right">
+		<div class="container post-content">
+
+			<h2>Downloads</h2>
+			<a class="tile inline-block no-float bg-grayDark command-button primary no-border" href="http://github.com/Wurst-Imperium/Wolfram-MC-{{ page.minecraft-version }}/releases/download/v{{ page.wolfram-version }}/Wolfram-v{{ page.wolfram-version }}-MC{{ page.minecraft-version }}.zip" rel="nofollow" target="_blank" style="width: auto;height: auto;">
+				<span class="icon mif-file-download"></span>
+				Download Wolfram
+				<small>version {{ post.wolfram-version }} for Minecraft {{ post.minecraft-version }}</small>
+			</a>
+
 		</div>
 	</div>
-</div>
+{% endif %}
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
