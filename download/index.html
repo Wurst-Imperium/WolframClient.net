@@ -20,23 +20,28 @@ mcversions:
       <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5218363098774955" data-ad-slot="1999014029" data-ad-format="auto"></ins>
 		</div>
 
+    {% assign updates = site.posts | where: "category", "Wolfram Update" %}
     {% for mcversion in page.mcversions %}
-      {% if mcversion == "all" %}
-        {% assign updates = site.posts | where: "category", "Wolfram Update" %}
-      {% else %}
-        {% assign updates = site.posts | where: "minecraft-version", mcversion %}
-      {% endif %}
+
       <div class="margin10 no-margin-left no-margin-right padding10 no-padding-top no-padding-bottom bg-grayLighter fg-gray set-border text-light">
         <h2 class="text-light">{% if mcversion == "all" %}Latest Updates{% else %}Wolfram for Minecraft {{ mcversion }}{% endif %}</h2>
       </div>
+
       <div class="grid padding10">
         <div class="row cells4">
-          {% for update in updates limit: 3 %}
+
+          {% assign i = 0 %}
+          {% for update in updates %}
+          
+            {% unless mcversion == "all" or update.minecraft-versions contains mcversion %}
+              {% continue %}
+            {% endunless %}
+
             <div class="cell">
               <a href="{{ update.url }}">
                 <div class="image-container">
                   <div class="frame">
-                    <img src="{% if update.image %}{{ update.image | replace: "w1280-h720-no", "w320-h180-no" }}{% else %}https://i.ytimg.com/vi/{{ update.video }}/mqdefault.jpg{% endif %}" alt="{{ update.title }}">
+                    <img src="{% if update.image %}{{ update.image }}{% else %}https://i.ytimg.com/vi/{{ update.video }}/mqdefault.jpg{% endif %}" alt="{{ update.title }}">
                   </div>
                   <div class="image-overlay" style="background-color: rgba(0, 0, 0, .8);">
                     <div class="leader text-shadow" style="width: 100%;height: 100%;display: table;">
@@ -49,12 +54,19 @@ mcversions:
                 <a href="{{ update.url }}">{{ update.title }}</a>
               </h3>
             </div>
+
+            {% assign i = i | plus: 1 %}
+            {% if i >= 3 %}
+              {% break %}
+            {% endif %}
+
           {% endfor %}
+
           <div class="cell">
             {% if mcversion == "all" %}
               {% capture allversions %}all/{% endcapture %}
             {% else %}
-              {% capture allversions %}minecraft-{{ updates[0].minecraft-version | slugify }}/{% endcapture %}
+              {% capture allversions %}minecraft-{{ mcversion | slugify }}/{% endcapture %}
             {% endif %}
             <a href="{{ allversions }}">
               <div class="image-container">
@@ -73,8 +85,10 @@ mcversions:
               <a href="{{ allversions }}">All Versions</a>
             </h3>
           </div>
+
         </div>
       </div>
+
     {% endfor %}
 
   </div>
