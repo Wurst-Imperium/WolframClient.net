@@ -1,5 +1,6 @@
 ---
-title: Download Wolfram
+title: Minecraft Wolfram Hacked Client Downloads
+description: Wolfram downloads for all Minecraft versions
 layout: bare
 permalink: /download/
 mcversions:
@@ -9,18 +10,16 @@ mcversions:
   - "1.8"
   - "all"
 ---
-<header class="bg-steel fg-white">
-	<div style="width: 100%;height: 3.125rem;"></div>
-	<div class="container padding40 no-padding-left no-padding-right">
-    <h1 class="align-center text-shadow">
-      Minecraft Wolfram Hacked Client Downloads
-      <br>
-      <small class="fg-grayLighter">Wolfram downloads for all Minecraft versions</small>
-    </h1>
-	</div>
-</header>
+{% include title.html l1 = page.title l2 = page.description %}
+
 <div class="padding20 no-padding-left no-padding-right">
-  <div class="container">
+  <div class="container post-content">
+
+    <!-- Wolfram Downloads -->
+		<div class="margin20 no-margin-left no-margin-right no-margin-top">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5218363098774955" data-ad-slot="1999014029" data-ad-format="auto"></ins>
+		</div>
+
     {% for mcversion in page.mcversions %}
       {% if mcversion == "all" %}
         {% assign updates = site.posts | where: "category", "Wolfram Update" %}
@@ -77,5 +76,11 @@ mcversions:
         </div>
       </div>
     {% endfor %}
+
   </div>
 </div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
