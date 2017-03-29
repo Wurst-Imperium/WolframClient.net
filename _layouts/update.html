@@ -1,12 +1,8 @@
 ---
 layout: bare
 ---
-<header class="bg-steel fg-white">
-	<div style="width: 100%;height: 3.125rem;"></div>
-	<div class="container padding40 no-padding-left no-padding-right">
-		{% include news/header.html %}
-	</div>
-</header>
+{% assign date = page.date | date: "%Y-%m-%d" %}
+{% include title.html l1 = page.title l2 = date %}
 
 <div class="padding20 no-padding-left no-padding-right">
 	<div class="container post-content">
