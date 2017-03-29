@@ -27,12 +27,12 @@ collections:
   updates:
     output: true
     permalink: /updates/:slug/
+  tutorials:
+    output: true
+    permalink: /tutorials/:slug/
   redirects:
     output: true
     permalink: /:path/
-  questions:
-    output: true
-    permalink: /faq/:slug/
   api:
     output: true
     permalink: /api/:path
@@ -51,15 +51,14 @@ defaults:
       repo: Wolfram-MCX
   - scope:
       path: ""
+      type: tutorials
+    values:
+      layout: tutorial
+  - scope:
+      path: ""
       type: redirects
     values:
       layout: redirect
-  - scope:
-      path: ""
-      type: questions
-    values:
-      layout: question
-      category: Miscellaneous
   - scope:
       path: ""
       type: api
