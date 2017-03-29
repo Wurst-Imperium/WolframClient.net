@@ -16,6 +16,8 @@
 	{% assign page_image = page.image %}
 {% elsif page.video %}
 	{% capture page_image %}https://i.ytimg.com/vi/{{ page.video }}/maxresdefault.jpg{% endcapture %}
+{% else %}
+	{% assign page_image = "https://cloud.githubusercontent.com/assets/10100202/24444967/98e75fce-1468-11e7-95fb-bdd81426e460.jpg" %}
 {% endif %}
 
 <!DOCTYPE html>
