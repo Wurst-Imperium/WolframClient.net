@@ -12,10 +12,8 @@ layout: bare
 		</div>
 
 	  <div class="grid">
-			{% assign updates = site.posts | where: "category", "Wolfram Update" %}
-
       {% assign i = 0 %}
-	    {% for update in updates %}
+	    {% for update in site.updates reversed %}
 
 				{% unless page.mcversion == "all" or update.minecraft-versions contains page.mcversion %}
 					{% continue %}

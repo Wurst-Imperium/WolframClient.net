@@ -20,7 +20,6 @@ mcversions:
       <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5218363098774955" data-ad-slot="1999014029" data-ad-format="auto"></ins>
 		</div>
 
-    {% assign updates = site.posts | where: "category", "Wolfram Update" %}
     {% for mcversion in page.mcversions %}
 
       <div class="margin10 no-margin-left no-margin-right padding10 no-padding-top no-padding-bottom bg-grayLighter fg-gray set-border text-light">
@@ -31,8 +30,8 @@ mcversions:
         <div class="row cells4">
 
           {% assign i = 0 %}
-          {% for update in updates %}
-          
+          {% for update in site.updates reversed %}
+
             {% unless mcversion == "all" or update.minecraft-versions contains mcversion %}
               {% continue %}
             {% endunless %}
@@ -71,7 +70,7 @@ mcversions:
             <a href="{{ allversions }}">
               <div class="image-container">
                 <div class="frame bg-grayLighter set-border tile-content iconic">
-                  <img src="{% if updates[0].image %}{{ updates[0].image }}{% else %}https://i.ytimg.com/vi/{{ updates[0].video }}/mqdefault.jpg{% endif %}" alt="{{ updates[0].title }}" class="no-visible">
+                  <img src="{% if site.updates[0].image %}{{ site.updates[0].image }}{% else %}https://i.ytimg.com/vi/{{ site.updates[0].video }}/mqdefault.jpg{% endif %}" alt="{{ site.updates[0].title }}" class="no-visible">
                   <span class="icon mif-folder-open fg-grayLight" style="margin-top: -32px;"></span>
                 </div>
                 <div class="image-overlay" style="background-color: rgba(0, 0, 0, .8);">

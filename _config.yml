@@ -24,6 +24,9 @@ excerpt_separator: <!--read more-->
 analytics-id: UA-52838431-13
 
 collections:
+  updates:
+    output: true
+    permalink: /updates/:slug/
   redirects:
     output: true
     permalink: /:path/
@@ -37,21 +40,20 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "pages"
+      type: pages
     values:
-      layout: "default"
+      layout: default
   - scope:
       path: ""
-      type: posts
+      type: updates
     values:
-      layout: post
-      author: Alexander01998
+      layout: update
       repo: Wolfram-MCX
   - scope:
       path: ""
-      type: "redirects"
+      type: redirects
     values:
-      layout: "redirect"
+      layout: redirect
   - scope:
       path: ""
       type: questions
