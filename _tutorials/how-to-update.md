@@ -3,23 +3,15 @@ title: How To Update Wolfram
 ---
 1. [Download the new version of Wolfram](/download/).
 
-2. Extract the ZIP file that you downloaded.
+2. Double-click on the Wolfram installer (.JAR file) that you just downloaded and click <kbd>Install</kbd>.
 
-3. Navigate to `%appdata%\.minecraft\versions`.
+   ![](https://cloud.githubusercontent.com/assets/10100202/26793481/7321f704-4a1e-11e7-831b-3e81f3f99a01.png)
 
-   ![](https://cloud.githubusercontent.com/assets/10100202/24442386/2bd71532-145e-11e7-8c27-f014e2fbaf8b.png)
+3. You will get a message telling you that Wolfram has been successfully installed.
 
-4. Move the `Wolfram for Minecraft 1.xx` folder that you extracted from the ZIP file into this `versions` folder.
+   ![](https://cloud.githubusercontent.com/assets/10100202/26793572/bca8dc26-4a1e-11e7-87fb-61e982e7db0d.png)
 
-   ![](https://cloud.githubusercontent.com/assets/10100202/24442742/ce2029cc-145f-11e7-8da2-30d175a37c1b.png)
-
-5. In the confirmation dialog, select <kbd>Replace existing files</kbd>.
-
-   ![](https://cloud.githubusercontent.com/assets/10100202/24443707/f5e7f292-1463-11e7-9cd3-8ff3c49b17e0.png)
-
-   ℹ️ **You can safely overwrite these files without losing any data.** Wolfram saves its files in a different location.
-
-6. Select the Wolfram profile and press <kbd>PLAY</kbd>.
+4. Open the Minecraft launcher, select the Wolfram profile and press <kbd>PLAY</kbd>.
 
    ![](https://cloud.githubusercontent.com/assets/10100202/24443367/ac91713c-1462-11e7-81e6-7c6d29bf3c9a.png)
 
