@@ -48,7 +48,8 @@ defaults:
       type: updates
     values:
       layout: update
-      repo: Wolfram-MCX
+      repo: Wolfram-MCX2
+      format: jar
   - scope:
       path: ""
       type: tutorials

@@ -36,7 +36,7 @@ layout: bare
 
 			<h2>Downloads</h2>
 			{% for mcversion in page.minecraft-versions %}
-				<a class="tile inline-block no-float bg-grayDark command-button primary no-border" href="http://github.com/Wurst-Imperium/{{ page.repo }}/releases/download/v{{ page.wolfram-version }}/Wolfram-v{{ page.wolfram-version }}-MC{{ mcversion }}.zip" rel="nofollow" target="_blank" style="width: auto;height: auto;">
+				<a class="tile inline-block no-float bg-grayDark command-button primary no-border" href="http://github.com/Wurst-Imperium/{{ page.repo }}/releases/download/v{{ page.wolfram-version }}/Wolfram-v{{ page.wolfram-version }}-MC{{ mcversion }}.{{ page.format }}" rel="nofollow" target="_blank" style="width: auto;height: auto;">
 					<span class="icon mif-file-download"></span>
 					Wolfram v{{ post.wolfram-version }} MC{{ mcversion }}
 					<small>for Minecraft {{ site.mcversions[mcversion] }}</small>
