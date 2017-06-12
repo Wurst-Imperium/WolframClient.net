@@ -35,13 +35,19 @@ layout: bare
 		<div class="container post-content">
 
 			<h2>Downloads</h2>
-			{% for mcversion in page.minecraft-versions %}
-				<a class="tile inline-block no-float bg-grayDark command-button primary no-border" href="http://github.com/Wurst-Imperium/{{ page.repo }}/releases/download/v{{ page.wolfram-version }}/Wolfram-v{{ page.wolfram-version }}-MC{{ mcversion }}.{{ page.format }}" rel="nofollow" target="_blank" style="width: auto;height: auto;">
-					<span class="icon mif-file-download"></span>
-					Wolfram v{{ post.wolfram-version }} MC{{ mcversion }}
-					<small>for Minecraft {{ site.mcversions[mcversion] }}</small>
-				</a>
-			{% endfor %}
+			{% if page.format == "zip" %}
+				<p>
+					Downloads for this version are no longer available.
+				</p>
+			{% else %}
+				{% for mcversion in page.minecraft-versions %}
+					<a class="tile inline-block no-float bg-grayDark command-button primary no-border" href="http://github.com/Wurst-Imperium/{{ page.repo }}/releases/download/v{{ page.wolfram-version }}/Wolfram-v{{ page.wolfram-version }}-MC{{ mcversion }}.{{ page.format }}" rel="nofollow" target="_blank" style="width: auto;height: auto;">
+						<span class="icon mif-file-download"></span>
+						Wolfram v{{ post.wolfram-version }} MC{{ mcversion }}
+						<small>for Minecraft {{ site.mcversions[mcversion] }}</small>
+					</a>
+				{% endfor %}
+			{% endif %}
 
 		</div>
 	</div>
