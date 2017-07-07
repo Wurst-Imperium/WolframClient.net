@@ -11,6 +11,7 @@ timezone: Europe/Berlin
 title: WolframClient.net
 
 mcversions:
+  "1.12": "1.12"
   "1.11": "1.11 - 1.11.2"
   "1.10": "1.10 - 1.10.2"
   "1.9.4": "1.9.4"
