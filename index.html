@@ -18,248 +18,106 @@ screenshots:
 	</div>
 </div>
 <div class="padding20 no-padding-left no-padding-right">
-  <div class="container">
-  	<h2>About Wolfram</h2>
-  	<p>
-  		Wolfram is a hacked client for Minecraft that allows you to do all kinds of cheats and hacks that the game normally wouldn't allow, such as flying in Survival Mode, finding ores with X-Ray vision and automatically attacking enemies.
-  	</p>
-  	<p>
-  		The Wolfram Client is mostly known for its large collection of hacks, its high-quality NoCheat+ bypasses, a beautiful user interface and its built-in OptiFine integration.
-  	</p>
-  	<p>
-  		Wolfram was originally created by ShadowSpl0it, who later donated the project to WiZARDHAX.com, and is now maintained by the Wurst-Imperium. We have updated the client to Minecraft 1.9.4 as well as Minecraft 1.10 and we will continue to update and improve it in the future.
-  	</p>
-  </div>
+	<div class="container">
+		<h2>About Wolfram</h2>
+		<p>
+			Wolfram is a hacked client for Minecraft that allows you to do all kinds of cheats and hacks that the game normally wouldn't allow, such as flying in Survival Mode, finding ores with X-Ray vision and automatically attacking enemies.
+		</p>
+		<p>
+			The Wolfram Client is mostly known for its large collection of hacks, its high-quality NoCheat+ bypasses, a beautiful user interface and its built-in OptiFine integration.
+		</p>
+		<p>
+			Wolfram was originally created by ShadowSpl0it, who later donated the project to WiZARDHAX.com, and is now maintained by the Wurst-Imperium. We have updated the client to Minecraft 1.9.4 as well as Minecraft 1.10 and we will continue to update and improve it in the future.
+		</p>
+	</div>
 </div>
 <div class="padding40 no-padding-left no-padding-right bg-grayLighter">
-  <div class="container align-center">
-		<h2>Features (125)</h2>
+	<div class="container align-center">
+		{% assign features = site.data.features %}
+		<h2>Features ({{ features.cheats.size | plus: features.commands.size | plus: features.other.size }})</h2>
 	</div>
 </div>
 <div class="padding20 no-padding-left no-padding-right">
-  <div class="container">
-    <div class="grid">
-      <div class="row">
-        <h3>Cheats (101)</h3>
-      </div>
-      <div class="row cells5">
-        <div class="cell">
-          <ul>
-            <li>AimAssist</li>
-            <li>Aimbot</li>
-            <li>AirMove</li>
-            <li>AirWalk</li>
-            <li>ArrowTrajectories</li>
-            <li>AntiAFK</li>
-            <li>AntiHurtcam</li>
-            <li>AntiSpam</li>
-            <li>ArmorESP</li>
-            <li>AutoArmor</li>
-            <li>AutoAttack</li>
-            <li>AutoSteal</li>
-            <li>AutoEat</li>
-            <li>AutoFish</li>
-            <li>AutoMine</li>
-            <li>AutoShoot</li>
-            <li>AutoRespawn</li>
-            <li>AutoSoup</li>
-            <li>AutoSwim</li>
-            <li>AutoSword</li>
-            <li>AutoTool</li>
-          </ul>
-        </div>
-        <div class="cell">
-          <ul>
-            <li>AutoWalk</li>
-            <li>Blink</li>
-            <li>Breadcrumbs</li>
-            <li>BunnyHop</li>
-            <li>BowAimbot</li>
-            <li>CaveFinder</li>
-            <li>CameraNoClip</li>
-            <li>ChestESP</li>
-            <li>ClickAimbot</li>
-            <li>ClickAura</li>
-            <li>ClickNuker</li>
-            <li>CompassTracer</li>
-            <li>CreativeFly</li>
-            <li>Criticals</li>
-            <li>Derp</li>
-            <li>Dolphin</li>
-            <li>Enhance</li>
-            <li>FarmhuntESP</li>
-            <li>FakeHackers</li>
-            <li>FastBow</li>
-            <li>FastBreak</li>
-          </ul>
-        </div>
-        <div class="cell">
-          <ul>
-            <li>FastFall</li>
-            <li>FastLadder</li>
-            <li>FastPlace</li>
-            <li>Fightbot</li>
-            <li>Flight</li>
-            <li>Flip</li>
-            <li>FlyNCP</li>
-            <li>FlyVanilla</li>
-            <li>ForceField</li>
-            <li>Freecam</li>
-            <li>Fullbright</li>
-            <li>Ghost</li>
-            <li>Glide</li>
-            <li>GlideFly</li>
-            <li>Headles</li>
-            <li>HighJump</li>
-            <li>InvWalk</li>
-            <li>ItemESP</li>
-            <li>ItemLabels</li>
-            <li>Jesus</li>
-            <li>KillAura</li>
-          </ul>
-        </div>
-        <div class="cell">
-          <ul>
-            <li>MiddleClickFriends</li>
-            <li>MobESP</li>
-            <li>MoreInventory</li>
-            <li>Nametags</li>
-            <li>NoBlind</li>
-            <li>NoBreakDelay</li>
-            <li>NoFall</li>
-            <li>NoFireworks</li>
-            <li>NoOverlay</li>
-            <li>NoSlowdown</li>
-            <li>Nuker</li>
-            <li>Panic</li>
-            <li>ParkourJump</li>
-            <li>Pathfinder</li>
-            <li>Phase</li>
-            <li>PlayerESP</li>
-            <li>PotionEffects</li>
-            <li>Projectiles</li>
-            <li>ProphuntESP</li>
-            <li>Reach</li>
-            <li>Regen</li>
-          </ul>
-        </div>
-        <div class="cell">
-          <ul>
-            <li>SafeWalk</li>
-            <li>SilentSneak</li>
-            <li>Sneak</li>
-            <li>Spider</li>
-            <li>Speed</li>
-            <li>Sprint</li>
-            <li>SprintLegit</li>
-            <li>Step</li>
-            <li>StepLegit</li>
-            <li>Timer</li>
-            <li>Tracers</li>
-            <li>Twerk</li>
-            <li>TrueSight</li>
-            <li>Velocity</li>
-            <li>Wallhack</li>
-            <li>Xray</li>
-            <li>Zoot</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="grid">
+			<div class="row">
+				<h3>Cheats ({{ features.cheats.size }})</h3>
+			</div>
+			<div class="row cells5">
+				{% assign colsize = features.cheats.size | divided_by: 5.0 | ceil %}
+				{% for i in (0..4) %}
+					<div class="cell">
+						<ul>
+							{% for i2 in (1..colsize) %}
+								{% assign i3 = i | times: colsize | plus: i2 | minus: 1 %}
+								{% if i3 >= features.cheats.size %}
+									{% break %}
+								{% endif %}
+								<li>{{ features.cheats[i3] }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 </div>
 <div class="padding20 no-padding-left no-padding-right bg-grayLighter">
-  <div class="container">
-    <div class="grid">
-      <div class="row">
-        <h3>Commands (15)</h3>
-      </div>
-      <div class="row cells5">
-        <div class="cell">
-          <ul>
-            <li>.bind</li>
-            <li>.clear</li>
-            <li>.cs</li>
-          </ul>
-        </div>
-        <div class="cell">
-          <ul>
-            <li>.damage</li>
-            <li>.friends</li>
-            <li>.enemies</li>
-          </ul>
-        </div>
-        <div class="cell">
-          <ul>
-            <li>.hclip</li>
-            <li>.help</li>
-            <li>.mm</li>
-          </ul>
-        </div>
-        <div class="cell">
-          <ul>
-            <li>.nameprotect</li>
-            <li>.panic</li>
-            <li>.path</li>
-          </ul>
-        </div>
-        <div class="cell">
-          <ul>
-            <li>.say</li>
-            <li>.scrape</li>
-            <li>.vclip</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="grid">
+			<div class="row">
+				<h3>Commands ({{ features.commands.size }})</h3>
+			</div>
+			<div class="row cells5">
+				{% assign colsize = features.commands.size | divided_by: 5.0 | ceil %}
+				{% for i in (0..4) %}
+					<div class="cell">
+						<ul>
+							{% for i2 in (1..colsize) %}
+								{% assign i3 = i | times: colsize | plus: i2 | minus: 1 %}
+								{% if i3 >= features.commands.size %}
+									{% break %}
+								{% endif %}
+								<li>{{ features.commands[i3] }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 </div>
 <div class="padding20 no-padding-left no-padding-right">
-  <div class="container">
-    <div class="grid">
-      <div class="row">
-        <h3>Other Features (9)</h3>
-      </div>
-      <div class="row cells5">
-				<div class="cell">
-				  <ul>
-						<li>Alt Manager</li>
-						<li>Array List</li>
-				  </ul>
-				</div>
-				<div class="cell">
-				  <ul>
-            <li>GUI Editor</li>
-            <li>GUI Presets</li>
-				  </ul>
-				</div>
-				<div class="cell">
-				  <ul>
-            <li>Info Box</li>
-            <li>Radar</li>
-				  </ul>
-				</div>
-				<div class="cell">
-				  <ul>
-            <li>Rainbow Mode</li>
-            <li>Tab GUI</li>
-				  </ul>
-				</div>
-				<div class="cell">
-				  <ul>
-            <li>Text Radar</li>
-				  </ul>
-				</div>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="grid">
+			<div class="row">
+				<h3>Other Features ({{ features.other.size }})</h3>
+			</div>
+			<div class="row cells5">
+				{% assign colsize = features.other.size | divided_by: 5.0 | ceil %}
+				{% for i in (0..4) %}
+					<div class="cell">
+						<ul>
+							{% for i2 in (1..colsize) %}
+								{% assign i3 = i | times: colsize | plus: i2 | minus: 1 %}
+								{% if i3 >= features.other.size %}
+									{% break %}
+								{% endif %}
+								<li>{{ features.other[i3] }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 </div>
 <div class="padding20 no-padding-left no-padding-right bg-grayLighter">
-  <div class="container">
-    <div class="grid">
-      <div class="row">
+	<div class="container">
+		<div class="grid">
+			<div class="row">
 				<h2 class="align-center">Compatibility</h2>
-      </div>
+			</div>
 			<div class="row">
 				<table class="table border bordered bg-white">
 					<thead>
@@ -302,11 +160,11 @@ screenshots:
 	</div>
 </div>
 <div class="padding20 no-padding-left no-padding-right">
-  <div class="container align-center">
-    <div class="grid">
-      <div class="row">
+	<div class="container align-center">
+		<div class="grid">
+			<div class="row">
 				<h2>Review by WiZARDHAX.com</h2>
-      </div>
+			</div>
 			<div class="row">
 				<div class="video-container no-padding-top">
 					<iframe src="https://www.youtube.com/embed/LKPmPdNa6Nc?rel=0" frameborder="0" allowfullscreen=""></iframe>
@@ -316,13 +174,13 @@ screenshots:
 	</div>
 </div>
 <div class="bg-grayLighter padding20 no-padding-left no-padding-right">
-  <div class="container align-center">
-  	<h2>Live Downloads Counter</h2>
-    <a href="/download/">
-      <img src="https://drive.google.com/uc?id=0B2YeSS9tm5zLdTVXWUFYVmNHRVU" alt="Wolfram downloads counter" style="height: 50px;">
-    </a>
-    <p class="text-small fg-gray">
-      *Only counts downloads since Wolfram was brought back by the Wurst-Imperium.
-    </p>
-  </div>
+	<div class="container align-center">
+		<h2>Live Downloads Counter</h2>
+		<a href="/download/">
+			<img src="https://drive.google.com/uc?id=0B2YeSS9tm5zLdTVXWUFYVmNHRVU" alt="Wolfram downloads counter" style="height: 50px;">
+		</a>
+		<p class="text-small fg-gray">
+			*Only counts downloads since Wolfram was brought back by the Wurst-Imperium.
+		</p>
+	</div>
 </div>

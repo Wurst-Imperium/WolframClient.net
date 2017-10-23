@@ -1,0 +1,130 @@
+cheats:
+  - AimAssist
+  - Aimbot
+  - AirMove
+  - AirWalk
+  - ArrowTrajectories
+  - AntiAFK
+  - AntiHurtcam
+  - AntiSpam
+  - ArmorESP
+  - AutoArmor
+  - AutoAttack
+  - AutoSteal
+  - AutoEat
+  - AutoFish
+  - AutoMine
+  - AutoShoot
+  - AutoRespawn
+  - AutoSoup
+  - AutoSwim
+  - AutoSword
+  - AutoTool
+  - AutoWalk
+  - Blink
+  - Breadcrumbs
+  - BunnyHop
+  - BowAimbot
+  - CaveFinder
+  - CameraNoClip
+  - ChestESP
+  - ClickAimbot
+  - ClickAura
+  - ClickNuker
+  - CompassTracer
+  - CreativeFly
+  - Criticals
+  - Derp
+  - Dolphin
+  - Enhance
+  - FarmhuntESP
+  - FakeHackers
+  - FastBow
+  - FastBreak
+  - FastFall
+  - FastLadder
+  - FastPlace
+  - Fightbot
+  - Flight
+  - Flip
+  - FlyNCP
+  - FlyVanilla
+  - ForceField
+  - Freecam
+  - Fullbright
+  - Ghost
+  - Glide
+  - GlideFly
+  - Headles
+  - HighJump
+  - InvWalk
+  - ItemESP
+  - ItemLabels
+  - Jesus
+  - KillAura
+  - MiddleClickFriends
+  - MobESP
+  - MoreInventory
+  - Nametags
+  - NoBlind
+  - NoBreakDelay
+  - NoFall
+  - NoFireworks
+  - NoOverlay
+  - NoSlowdown
+  - Nuker
+  - Panic
+  - ParkourJump
+  - Pathfinder
+  - Phase
+  - PlayerESP
+  - PotionEffects
+  - Projectiles
+  - ProphuntESP
+  - Reach
+  - Regen
+  - SafeWalk
+  - SilentSneak
+  - Sneak
+  - Spider
+  - Speed
+  - Sprint
+  - SprintLegit
+  - Step
+  - StepLegit
+  - Timer
+  - Tracers
+  - Twerk
+  - TrueSight
+  - Velocity
+  - Wallhack
+  - Xray
+  - Zoot
+
+commands:
+  - .bind
+  - .clear
+  - .cs
+  - .damage
+  - .friends
+  - .enemies
+  - .hclip
+  - .help
+  - .mm
+  - .nameprotect
+  - .panic
+  - .path
+  - .say
+  - .scrape
+  - .vclip
+
+other:
+  - Alt Manager
+  - Array List
+  - GUI Editor
+  - GUI Presets
+  - Info Box
+  - Radar
+  - Rainbow Mode
+  - Tab GUI
+  - Text Radar
