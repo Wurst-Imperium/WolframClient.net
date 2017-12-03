@@ -3,7 +3,7 @@ title: How To Install Wolfram
 ---
 1. [Download Wolfram](/download/).
 
-2. Double-click on the Wolfram installer (.JAR file) that you just downloaded and click <kbd>Install</kbd>.
+2. Run the Wolfram installer (.JAR file) that you just downloaded and click <kbd>Install</kbd>.
 
    ![](https://cloud.githubusercontent.com/assets/10100202/26793481/7321f704-4a1e-11e7-831b-3e81f3f99a01.png)
 
