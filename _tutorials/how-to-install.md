@@ -9,6 +9,8 @@ title: How To Install Wolfram
 
 3. You will get a message telling you that Wolfram has been successfully installed.
 
+   **Notice:** Wolfram MC 1.12 requires Minecraft 1.12 (not 1.12.2) to be installed.
+
    ![](https://cloud.githubusercontent.com/assets/10100202/26793572/bca8dc26-4a1e-11e7-87fb-61e982e7db0d.png)
 
 4. Open the Minecraft launcher. (Close and re-open the launcher if it was already open.)
