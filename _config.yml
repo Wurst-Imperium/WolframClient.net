@@ -50,7 +50,7 @@ defaults:
     values:
       layout: update
       repo: Wolfram-MCX2
-      format: jar
+      format: jar_and_zip
   - scope:
       path: ""
       type: tutorials
