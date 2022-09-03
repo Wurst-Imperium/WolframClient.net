@@ -3,6 +3,8 @@ layout: bare
 ---
 {% assign date = page.date | date: "%Y-%m-%d" %}
 {% include title.html l1 = page.title l2 = date %}
+{% assign mcxbase = "https://github.com/Wurst-Imperium/{{ page.repo }}/releases/download/" %}
+{% assign adbase = "https://files.wurstimperium.net/wolfram" %}
 
 <div class="padding20 no-padding-left no-padding-right">
 	<div class="container post-content">
@@ -50,24 +52,42 @@ layout: bare
 							<span class="tag fg-white bg-grayLight" style="cursor: help;vertical-align: baseline;" title="Recommended if you don't have Java installed.
 Just extract it and run the 'Wolfram Installer.cmd' file.">.ZIP</span>
 						</h3>
+						{% assign ext = ".zip" %}
 						{% for mcversion in page.minecraft-versions %}
-							<a class="tile inline-block no-float bg-grayDark command-button primary no-border" href="https://github.com/Wurst-Imperium/{{ page.repo }}/releases/download/v{{ page.wolfram-version }}/Wolfram-v{{ page.wolfram-version }}-MC{{ mcversion }}.zip" rel="nofollow" target="_blank" style="width: auto;height: auto;">
+							
+							{% capture full-version %}v{{ page.wolfram-version }} MC{{ mcversion }}{% endcapture %}
+							{% capture basepath %}v{{ page.wolfram-version }}/Wolfram-v{{ page.wolfram-version }}-MC{{ mcversion | replace: " ", "-" }}{% endcapture %}
+							
+							{% capture directlink %}{{ mcxbase }}{{ basepath }}{{ ext }}{% endcapture %}
+							{% capture adlink %}{{ adbase }}?version={{ full-version | urlencode }}&path={{ basepath }}{{ ext }}{% endcapture %}
+
+							<a class="tile inline-block no-float bg-grayDark command-button primary no-border" href="{% if page.repo == 'Wolfram-MCX2' %}{{adlink}}{% else %}{{ directlink }}{% endif %}" rel="nofollow" target="_blank" style="width: auto;height: auto;">
 								<span class="icon mif-file-download"></span>
 								Wolfram v{{ page.wolfram-version }} MC{{ mcversion }}
 								<small>for Minecraft {{ site.mcversions[mcversion] }}</small>
 							</a>
+
 						{% endfor %}
 					</div>
 				{% endif %}
 
 				<div class="padding10 no-padding-left no-padding-right">
 					<h3>Cross-platform Wolfram installer <span class="tag fg-white bg-grayLight" style="cursor: help;vertical-align: baseline;" title="Requires Java 8 to be installed and properly configured.">.JAR</span></h3>
+					{% assign ext = ".jar" %}
 					{% for mcversion in page.minecraft-versions %}
-						<a class="tile inline-block no-float bg-grayDark command-button primary no-border" href="http://github.com/Wurst-Imperium/{{ page.repo }}/releases/download/v{{ page.wolfram-version }}/Wolfram-v{{ page.wolfram-version }}-MC{{ mcversion }}.jar" rel="nofollow" target="_blank" style="width: auto;height: auto;">
+
+						{% capture full-version %}v{{ page.wolfram-version }} MC{{ mcversion }}{% endcapture %}
+						{% capture basepath %}v{{ page.wolfram-version }}/Wolfram-v{{ page.wolfram-version }}-MC{{ mcversion | replace: " ", "-" }}{% endcapture %}
+						
+						{% capture directlink %}{{ mcxbase }}{{ basepath }}{{ ext }}{% endcapture %}
+						{% capture adlink %}{{ adbase }}?version={{ full-version | urlencode }}&path={{ basepath }}{{ ext }}{% endcapture %}
+						
+						<a class="tile inline-block no-float bg-grayDark command-button primary no-border" href="{% if page.repo == 'Wolfram-MCX2' %}{{adlink}}{% else %}{{ directlink }}{% endif %}" rel="nofollow" target="_blank" style="width: auto;height: auto;">
 							<span class="icon mif-file-download"></span>
 							Wolfram v{{ post.wolfram-version }} MC{{ mcversion }}
 							<small>for Minecraft {{ site.mcversions[mcversion] }}</small>
 						</a>
+
 					{% endfor %}
 				</div>
 
