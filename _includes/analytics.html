@@ -1,9 +1,35 @@
+<script defer
+	file-types="7z,avi,csv,docx,exe,gif,gz,iso,jar,jpg,jpeg,key,midi,mov,mp3,mp4,mpeg,pdf,pkg,png,pps,ppt,pptx,rar,rtf,txt,wav,webm,webp,wma,wmv,xlsx,zip"
+	data-domain="wolframclient.net"
+	src="https://udk28wbj.wurstclient.net/js/script.outbound-links.file-downloads.js"></script>
+
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', '{{ site.analytics-id }}', 'auto');
-  ga('set', 'anonymizeIp', true);
-  ga('send', 'pageview');
+	window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+	
+	let links = document.querySelectorAll("a[data-analytics]");
+	for (var i = 0; i < links.length; i++) {
+		links[i].addEventListener('click', handleLinkEvent);
+		links[i].addEventListener('auxclick', handleLinkEvent);
+	}
+	function handleLinkEvent(event) {
+		var link = event.target;
+		var middle = event.type == "auxclick" && event.which == 2;
+		var click = event.type == "click";
+		while (link && (typeof link.tagName == 'undefined' || link.tagName.toLowerCase() != 'a' || !link.href)) {
+			link = link.parentNode;
+		}
+		if (middle || click) {
+			let attributes = link.getAttribute('data-analytics').split(/,(.+)/);
+			let events = [JSON.parse(attributes[0]), JSON.parse(attributes[1] || '{}')];
+			plausible(...events);
+		}
+		if (!link.target) {
+			if (!(event.ctrlKey || event.metaKey || event.shiftKey) && click) {
+				setTimeout(function () {
+					location.href = link.href;
+				}, 150);
+				event.preventDefault();
+			}
+		}
+	}
 </script>

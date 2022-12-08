@@ -22,8 +22,6 @@ paginate_path: "/news/:num/"
 permalink: /news/:year-:month-:day-:title/
 excerpt_separator: <!--read more-->
 
-analytics-id: UA-52838431-13
-
 collections:
   updates:
     output: true
