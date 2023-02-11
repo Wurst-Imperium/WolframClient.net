@@ -7,8 +7,8 @@ gems:
   - jekyll-paginate
 
 timezone: Europe/Berlin
-
 title: WolframClient.net
+url: "https://www.wolframclient.net"
 
 mcversions:
   "1.12": "1.12 - 1.12.2"
